@@ -1,0 +1,15 @@
+name: devbox-test-image-definition    
+version: 1.0.0    
+description: Test Dev Box image definition    
+type: ImageDefinition    
+tasks:
+  - task: ~/WinGet
+    displayName: Install tools via WinGet
+    inputs:
+      packages:
+        - Git.Git
+        - Microsoft.VisualStudioCode
+  - task: ~/PowerShell
+    displayName: Run setup script
+    inputs:
+      script: ./tasks/install-tools.ps1
