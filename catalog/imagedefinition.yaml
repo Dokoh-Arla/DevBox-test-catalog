@@ -1,10 +1,13 @@
-name: devbox-image-definition
+name: devbox-projectimage-test
+image: MicrosoftWindowsDesktop_windows-ent-cpc_win11-24h2-ent-cpc-m365
+
 tasks:
- - task: ~/WinGet
-   inputs:
-     packages:
-     - Git.Git
-     - Microsoft.VisualStudioCode
-- task: ~/PowerShell
-  inputs:
-   script: ./tasks/install-tools.ps1
+  - name: ~/winget
+    parameters:
+      package: Microsoft.AzureCLI
+  - name: ~/winget
+    parameters:
+      package: Git.Git
+  - name: ~/winget
+    parameters:
+      package: Microsoft.VisualStudioCode
