@@ -1,17 +1,10 @@
-name: devbox-image-definition    
-version: 1.0.0    
-description: Test Dev Box configuration    
-type: ImageDefinition    
-    
-tasks:    
-  - task: ~/WinGet    
-    displayName: Install tools via WinGet    
-    inputs:    
-      packages:    
-        - Git.Git    
-        - Microsoft.VisualStudioCode    
-    
-  - task: ~/PowerShell    
-    displayName: Run custom setup script    
-    inputs:    
+name: devbox-image-definition
+tasks:
+  - task: ~/WinGet
+    inputs:
+      packages:
+        - Git.Git
+        - Microsoft.VisualStudioCode
+  - task: ~/PowerShell
+    inputs:
       script: ./tasks/install-tools.ps1
