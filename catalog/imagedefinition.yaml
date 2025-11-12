@@ -1,10 +1,10 @@
 name: devbox-image-definition
 tasks:
-  - task: ~/WinGet
-    inputs:
-      packages:
-        - Git.Git
-        - Microsoft.VisualStudioCode
-  - task: ~/PowerShell
-    inputs:
-      script: ./tasks/install-tools.ps1
+ - task: ~/WinGet
+   inputs:
+     packages:
+     - Git.Git
+     - Microsoft.VisualStudioCode
+- task: ~/PowerShell
+  inputs:
+   script: ./tasks/install-tools.ps1
