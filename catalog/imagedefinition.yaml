@@ -1,0 +1,12 @@
+# Zapisz jako catalog/imagedefinition.yaml    
+name: devbox-image-definition    
+description: Test configuration of Dev Box    
+tasks:    
+  - task: ~/WinGet    
+    inputs:    
+      packages:    
+        - Git.Git    
+        - Microsoft.VisualStudioCode    
+  - task: ~/PowerShell    
+    inputs:    
+      script: ./tasks/install-tools.ps1    
